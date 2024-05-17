@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speak Converter</title>
+  </head>
+  <body>
+    <main id="app" class="min-h-screen bg-gray-700 w-full flex items-center justify-center">
+      <section class="py-5 px-10 container bg-gray-400 w-[600px] min-h-[300px] rounded">
+        <h1 class="mb-5 text-xl">Type something to convert to speak</h1>
+        <div class="w-full mb-5">
+          <textarea name="" class="w-full min-h-32 outline-none p-5 rounded" placeholder="Write anything here" id="userInput"></textarea>
+        </div>
+        <div class="w-full flex items-center justify-between gap-5">
+          <select name="" id="voiceSelect" class=" flex-grow outline-none rounded h-9 "></select>
+          <button id="playBtn" class="border border-black py-1 px-5 rounded">Play</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
