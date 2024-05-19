@@ -9,7 +9,7 @@
   <body class="min-h-screen bg-slate-800 text-white px-[15px]">
     <div class="">
       <div
-        class="header sticky top-0 flex justify-between mb-[10px] px-[15px] items-center"
+        class="header bg-slate-800 py-[15px] sticky top-0 flex justify-between mb-[10px] px-[15px] items-center"
       >
         <h2>Weather App</h2>
         <div class="weather-input">
@@ -23,7 +23,7 @@
           <button
             id="searchBtn"
             type="button"
-            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer bg-white px-3"
+            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer bg-gray-400 px-3"
           >
             <i class="fa-solid p-0 fa-magnifying-glass"></i>
             Search
@@ -31,7 +31,7 @@
           <button
             id="locationBtn"
             type="button"
-            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer px-3 bg-orange-600"
+            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer px-3 bg-orange-500"
           >
             <i class="fa-solid fa-location-crosshairs"></i>
             Current Location
@@ -66,7 +66,7 @@
                 </svg>
               </div>
             </div>
-            <hr />
+            <hr class="mb-[10px]" />
             <div class="card-footer">
               <p class="text-gray-400 mb-[12px] text-[14px]">
                 <i class="fa-solid fa-calendar-days"></i>_____
@@ -225,6 +225,231 @@
                 <p class="text-gray-400">___</p>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="weather-right col-span-3">
+          <h2 class="mb-[10px]">Today's Highlights</h2>
+          <div class="highlights grid grid-cols-4 gap-x-[15px]">
+            <div
+              class="card bg-slate-500 p-[15px] col-span-2 rounded-[15px] mb-[15px]"
+            >
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Air Quantity Index</p>
+                <p
+                  class="air-index text-black py-[5px] px-[10px] rounded-[15px] bg-yellow-300"
+                >
+                  Good
+                </p>
+              </div>
+              <div class="air-indices grid grid-cols-4 place-items-center">
+                <i class="fa-solid fa-wind fa-2x"></i>
+                <div class="item">
+                  <p class="text-center">PM2.5</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">PM10</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">SO2</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">CO</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">NO</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">NO2</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">NH3</p>
+                  <h2>____</h2>
+                </div>
+                <div class="item">
+                  <p class="text-center">O3</p>
+                  <h2>____</h2>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card col-span-2 bg-slate-500 p-[15px] rounded-[15px] mb-[15px]"
+            >
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Sunrise & Sunset</p>
+              </div>
+              <div class="sunrise-sunset grid grid-cols-2">
+                <div class="item flex items-center gap-[10px]">
+                  <div class="icon">
+                    <img
+                      class="w-[55px] mt-[15px]"
+                      src="./svg/sunrise-svgrepo-com.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p>Sunrise</p>
+                    <h2 class="">_______</h2>
+                  </div>
+                </div>
+                <div class="item flex items-center gap-[10px]">
+                  <div class="icon">
+                    <img
+                      class="w-[55px] mt-[15px]"
+                      src="./svg/sunset-svgrepo-com.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p>Sunset</p>
+                    <h2 class="">_______</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Humidity</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-solid fa-droplet fa-1x"></i>
+                <h2 id="humidityVal">___%</h2>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Pressure</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-regular fa-compass fa-1x"></i>
+                <h2 id="pressureVal">___hPa</h2>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Visibility</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-regular fa-eye fa-1x"></i>
+                <h2 id="visibilityVal">___km</h2>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Wind Speed</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-solid fa-arrow-right"></i>
+                <h2 id="windSpeewVal">___m/s</h2>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Feels Like</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-solid fa-temperature-half"></i>
+                <h2 id="feelVal">___&deg;C</h2>
+              </div>
+            </div>
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <div
+                class="card-head flex items-center justify-between mb-[10px]"
+              >
+                <p>Wind Speed</p>
+              </div>
+              <div class="card-item flex items-center justify-between">
+                <i class="fa-solid fa-arrow-right"></i>
+                <h2 id="windSpeewVal">___m/s</h2>
+              </div>
+            </div>
+          </div>
+          <h2 class="mb-[5px]">Today at</h2>
+          <div class="hourly-forecast grid grid-cols-8 gap-x-[10px]">
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+            <div class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
+              <p>9 AM</p>
+              <svg data-v-3e6e9f12="" width="50px" height="50px" viewBox="0 0 148 148" class="owm-weather-icon">
+                <path d="M65.03 60.514c.642 0 1.27.057 1.889.143a15.476 15.476 0 01-.344-3.23c0-8.524 6.91-15.437 15.435-15.437 8.294 0 15.042 6.547 15.402 14.752a9.224 9.224 0 016.208-2.404 9.263 9.263 0 019.263 9.263 9.165 9.165 0 01-.619 3.305c.7-.14 1.423-.218 2.161-.218 5.97 0 10.806 4.839 10.806 10.805 0 5.97-4.836 10.806-10.806 10.806H65.031c-7.674 0-13.893-6.219-13.893-13.893 0-7.671 6.219-13.892 13.893-13.892" fill="#3b3c40"></path>
+                <path d="M39.25 73.05c.76 0 1.505.07 2.24.17a18.296 18.296 0 01-.41-3.834c0-10.114 8.2-18.31 18.312-18.31 9.84 0 17.843 7.766 18.27 17.5a10.935 10.935 0 017.366-2.853c6.068 0 10.987 4.922 10.987 10.99 0 1.382-.267 2.7-.732 3.918a12.868 12.868 0 012.564-.256c7.078 0 12.818 5.739 12.818 12.818 0 7.078-5.74 12.817-12.818 12.817H39.25c-9.103 0-16.48-7.378-16.48-16.48 0-9.103 7.377-16.48 16.48-16.48" fill="#efefed"></path>
+              </svg>
+              <p>___&deg;C</p>
+            </div>
+
           </div>
         </div>
       </div>
