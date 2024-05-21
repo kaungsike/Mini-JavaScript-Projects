@@ -11,22 +11,28 @@
       <div
         class="header h-auto border border-slate-800 w-full flex-col sm:flex-col xl:flex-row lg:flex-row md:flex-row 2xl:flex-row bg-slate-800 py-[5px] sticky top-0 2xl:px-[15px] xl:px-[15px] lg:px-[15px] md:px-[15px] sm:px-[50px] px-[15px] flex justify-between mb-[10px] items-center"
       >
-        <h2 class="sm:mb-[8px] mb-[5px] 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0">Weather App</h2>
-        <div class="weather-input  gap-[5px] flex 2xl:flex-row  xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-row">
+        <h2 class="sm:mb-[8px] mb-[5px] 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0">
+          Weather App
+        </h2>
+        <div
+          class="weather-input gap-[5px] flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-row"
+        >
           <input
             type="text"
             class="bg-slate-500 outline-none px-4 py-2 text-white border-none text-[16px] rounded-[25px] 2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-full w-full 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-[10px] mb-[8px]r"
             name="city"
-            id="city-input"
+            id="cityInput"
             placeholder="Enter City Name"
           />
           <button
             id="searchBtn"
             type="button"
-            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer bg-gray-400 px-3 2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-full 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-[10px] mb-[8px] flex items-center gap-x-2"
+            class="h-[40px] border-none text-[16px] rounded-[25px] text-black cursor-pointer bg-gray-400 px-3 2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-full 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-[10px] mb-[8px] flex items-center gap-x-2 active:scale-95 duration-150"
           >
             <i class="fa-solid p-0 fa-magnifying-glass"></i>
-            <span class="2xl:flex xl:flex lg:flex md:flex sm:flex hidden">Search</span>
+            <span class="2xl:flex xl:flex lg:flex md:flex sm:flex hidden pointer-events-none"
+              >Search</span
+            >
           </button>
           <button
             id="locationBtn"
@@ -34,12 +40,19 @@
             class="h-[40px] w-auto border-none text-[16px] rounded-[25px] text-black cursor-pointer px-3 bg-orange-500 2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-full 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-[10px] flex items-center gap-2"
           >
             <i class="fa-solid fa-location-crosshairs flex items-center"></i>
-            <span class="2xl:flex items-center xl:flex lg:flex md:flex sm:flex hidden">Current Location</span>
+            <span
+              class="2xl:flex items-center xl:flex lg:flex md:flex sm:flex hidden"
+              >Current Location</span
+            >
           </button>
         </div>
       </div>
-      <div class="weather-data sm:grid-cols-2 grid-cols-1 mx-1 md:col-span-2 lg:grid-cols-2 xl:grid-cols-3 grid 2xl:grid-cols-4 gap-[12px]">
-        <div class="weather-left sm:col-span-2 h-auto md:col-span-2 2xl:col-span-1 xl:col-span-1 lg:col-span-1 col-span-1">
+      <div
+        class="weather-data sm:grid-cols-2 grid-cols-1 mx-1 md:col-span-2 lg:grid-cols-2 xl:grid-cols-3 grid 2xl:grid-cols-4 gap-[12px]"
+      >
+        <div
+          class="weather-left sm:col-span-2 h-auto md:col-span-2 2xl:col-span-1 xl:col-span-1 lg:col-span-1 col-span-1"
+        >
           <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
             <div class="current-weather flex justify-between items-center">
               <div class="details">
@@ -227,9 +240,13 @@
             </div>
           </div>
         </div>
-        <div class="weather-right grid-cols-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2 2xl:col-span-3">
+        <div
+          class="weather-right grid-cols-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2 2xl:col-span-3"
+        >
           <h2 class="mb-[10px]">Today's Highlights</h2>
-          <div class="highlights grid-cols-2 sm:grid-cols-2 md:grid-cols-2 md:col-span-2 grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-[15px]">
+          <div
+            class="highlights grid-cols-2 sm:grid-cols-2 md:grid-cols-2 md:col-span-2 grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-[15px]"
+          >
             <div
               class="card col-span-2 sm:col-span-2 bg-slate-500 p-[15px] lg:col-span-2 xl:col-span-3 2xl:col-span-2 rounded-[15px] mb-[15px]"
             >
@@ -243,7 +260,9 @@
                   Good
                 </p>
               </div>
-              <div class="air-indices grid-cols-3 sm:grid-cols-4 grid md:grid-cols-3 2xl:grid-cols-4 place-items-center">
+              <div
+                class="air-indices grid-cols-3 sm:grid-cols-4 grid md:grid-cols-3 2xl:grid-cols-4 place-items-center"
+              >
                 <i class="fa-solid fa-wind fa-2x"></i>
                 <div class="item">
                   <p class="text-center">PM2.5</p>
@@ -316,7 +335,7 @@
                 </div>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -327,7 +346,7 @@
                 <h2 id="humidityVal">___%</h2>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -338,7 +357,7 @@
                 <h2 id="pressureVal">___hPa</h2>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -349,7 +368,7 @@
                 <h2 id="visibilityVal">___km</h2>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -360,7 +379,7 @@
                 <h2 id="windSpeewVal">___m/s</h2>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -371,7 +390,7 @@
                 <h2 id="feelVal">___&deg;C</h2>
               </div>
             </div>
-            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px] ">
+            <div class="card bg-slate-500 p-[15px] rounded-[15px] mb-[15px]">
               <div
                 class="card-head flex items-center justify-between mb-[10px]"
               >
@@ -384,7 +403,9 @@
             </div>
           </div>
           <h2 class="mb-[5px]">Today at</h2>
-          <div class="hourly-forecas grid-cols-2 sm:grid-cols-2 sm:w-full md:grid-cols-4 grid lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-x-[10px]">
+          <div
+            class="hourly-forecas grid-cols-2 sm:grid-cols-2 sm:w-full md:grid-cols-4 grid lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-x-[10px]"
+          >
             <div
               class="card text-center bg-slate-500 p-[15px] rounded-[15px] mb-[15px]"
             >
